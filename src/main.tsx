@@ -15,21 +15,16 @@ const queryClient = new QueryClient({
     },
 });
 
-
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/my-react-project">
 
             <QueryClientProvider client={queryClient}>
-              <AppThemeProvider>
-                <App/>
-              </AppThemeProvider>
-
-               
-
+                <AppThemeProvider>
+                    <App />
+                </AppThemeProvider>
             </QueryClientProvider>
 
         </BrowserRouter>
-
     </StrictMode>
 );
